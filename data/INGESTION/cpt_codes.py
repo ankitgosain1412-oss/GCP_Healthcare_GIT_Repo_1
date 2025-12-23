@@ -1,14 +1,14 @@
 from pyspark.sql import SparkSession
 
 # Create Spark session
-spark = SparkSession.builder \
-                    .appName("CPT Codes Ingestion") \
-                    .getOrCreate()
+spark = (SparkSession.builder
+                    .appName("CPT Codes Ingestion")
+                    .getOrCreate())
 
 # configure variables
-BUCKET_NAME = "healthcare-bucket-22032025"
+BUCKET_NAME = "healthcare-bucket-18122025"
 CPT_BUCKET_PATH = f"gs://{BUCKET_NAME}/landing/cptcodes/*.csv"
-BQ_TABLE = "avd-databricks-demo.bronze_dataset.cpt_codes"
+BQ_TABLE = "gcp-healthcare-project-481608.bronze_dataset.cpt_codes"
 TEMP_GCS_BUCKET = f"{BUCKET_NAME}/temp/"
 
 # read from cpt
