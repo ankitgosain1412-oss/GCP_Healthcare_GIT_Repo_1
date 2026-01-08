@@ -10,7 +10,7 @@ from airflow.providers.google.cloud.operators.dataproc import (
 )
 
 # define the variables
-PROJECT_ID = "GCP Healthcare Project"
+PROJECT_ID = "gcp-healthcare-project-481608"
 REGION = "us-east1"
 CLUSTER_NAME = "my-demo-cluster222"
 COMPOSER_BUCKET = "us-central1-my-demo-compose-98e1373f-bucket" ## change this to composer bucket that is created with composer environment.
